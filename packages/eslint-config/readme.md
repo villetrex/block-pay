@@ -1,0 +1,1 @@
+[ESLint configuration for Angular](./../../CONTRIBUTING.md#Eslint-configuration-for-angular.json)

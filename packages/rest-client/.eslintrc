@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "@kingmakers/eslint-config/eslint-core-preset",
+    "@kingmakers/eslint-config/eslint-react-preset",
+    "@kingmakers/eslint-config/eslint-ts-preset"
+  ], 
+ 
+}

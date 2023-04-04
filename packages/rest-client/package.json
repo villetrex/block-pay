@@ -1,0 +1,36 @@
+{
+  "name": "@villetrex/rest-client",
+  "version": "0.0.0",
+  "main": "./src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint:types": "tsc --noEmit",
+    "lint:scripts": "eslint ./src",
+    "lint": "concurrently 'yarn:lint:*' --kill-others-on-fail",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "devDependencies": {
+    "@villetrex/eslint-config": "*",
+    "@villetrex/tsconfig": "*",
+    "@types/jest": "^27.4.0",
+    "axios-mock-adapter": "^1.20.0",
+    "jest": "^27.5.1",
+    "jest-junit": "^13.0.0",
+    "jest-mock": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "axios": "0.24.0",
+    "axios-logger": "2.6.0",
+    "axios-retry": "3.2.4",
+    "https": "^1.0.0"
+  },
+  "lint-staged":{
+    "src/**/*.{js,jsx,ts,tsx}":[
+      "npx prettier --write",
+      "npx eslint --fix"
+    ]
+  }
+}

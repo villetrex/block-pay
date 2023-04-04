@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "@villetrex/eslint-config/eslint-core-preset",
+    "@villetrex/eslint-config/eslint-react-preset",
+    "@villetrex/eslint-config/eslint-ts-preset",
+    "@villetrex/eslint-config/eslint-jest-preset"
+  ],
+  "settings": {
+    "import/external-module-folders": [
+      "node_modules",
+      "components",
+      "icons",
+      "styles",
+      "transitions",
+      "utils"
+    ]
+  },
+  "rules": {
+    "import/no-relative-parent-imports": "off"
+  }
+}

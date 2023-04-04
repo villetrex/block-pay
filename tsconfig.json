@@ -1,0 +1,16 @@
+{
+  "extends": "@villetrex/tsconfig/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "experimentalDecorators": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.js",
+    "types/*.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

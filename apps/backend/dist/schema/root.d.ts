@@ -1,0 +1,2 @@
+export declare const root = "#graphql\n  scalar EmailAddress\n  scalar Currency\n  scalar DateTime\n  scalar JSON\n  scalar URL\n  scalar NonEmptyString\n  type Query\n  type Mutation\n  type Money {\n    value: NonEmptyString!\n    currency: Currency!\n  }\n";
+//# sourceMappingURL=root.d.ts.map

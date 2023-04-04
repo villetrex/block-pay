@@ -1,0 +1,22 @@
+{
+  "name": "@villetrex/dayjs",
+  "version": "0.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "lint:types": "tsc --noEmit",
+    "lint:scripts": "eslint .",
+    "lint": "concurrently 'yarn:lint:*' --kill-others-on-fail"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.22",
+    "@villetrex/eslint-config": "*",
+    "@villetrex/tsconfig": "*",
+    "eslint": "^7.32.0",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7"
+  }
+}
