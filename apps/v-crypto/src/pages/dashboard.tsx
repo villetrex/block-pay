@@ -1,7 +1,7 @@
-import React from 'react';
+import { NextPage } from 'next';
 
-function DashBoard() {
-  return <div> hellow world </div>;
-}
+const DashboardPage: NextPage = () => {
+  return <Dashboard />;
+};
 
-export default DashBoard;
+export default DashboardPage;

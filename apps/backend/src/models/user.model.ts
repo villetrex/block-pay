@@ -1,16 +1,5 @@
 import bcrypt from 'bcrypt';
-import {
-  BeforeCreate,
-  BeforeSave,
-  BeforeUpdate,
-  Column,
-  CreatedAt,
-  DeletedAt,
-  Model,
-  PrimaryKey,
-  Table,
-  UpdatedAt,
-} from 'sequelize-typescript';
+import { BeforeCreate, Column, CreatedAt, DeletedAt, Model, PrimaryKey, Table, UpdatedAt } from 'sequelize-typescript';
 
 import { User } from 'src/generated/graphql';
 
@@ -75,18 +64,13 @@ export default class UserModel extends Model {
   @DeletedAt
   deletionDate?: Date;
 
-  @BeforeUpdate
   @BeforeCreate
-  @BeforeSave
   static encryptPassword(user: User) {
     user.password = bcrypt.hashSync(user.password.toString() as string, bcrypt.genSaltSync(SALT_ROUNDS));
   }
 
   validatePassword(password: string) {
-    console.log('password', password, 'internal password', this.password.toString());
-    const isvalid = bcrypt.compareSync(password, this.password.toString());
-    console.log('isvalid', isvalid);
-    return isvalid;
+    return bcrypt.compareSync(password, this.password.toString());
   }
 
   // @Column

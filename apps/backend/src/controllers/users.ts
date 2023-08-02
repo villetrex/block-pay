@@ -6,8 +6,7 @@ import { LoginData, User } from 'src/generated/graphql';
 export class UserController {
   getUsers = async (): Promise<User[]> => await new UserService().getUsers();
 
-  createUser = async ({ email, password, firstName, lastName, country, state, city, role }: any): Promise<User> =>
-    await new UserService().createUser({ email, password, firstName, lastName, country, state, city, role });
+  createUser = async (user: User): Promise<User> => await new UserService().createUser(user);
 
   graphqlLogin = async ({
     email,

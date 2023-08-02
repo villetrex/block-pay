@@ -13,18 +13,18 @@ import { Tdx } from "../../typechain-types";
         deployer = accounts.deployer;
         user = accounts.user;
         await deployments.fixture("all");
-        tdxToken = ethers.getContract("Tdx", deployer);
+        tdxToken = await ethers.getContract("Tdx", deployer);
       });
       it("was deployed", () => {
         assert(tdxToken.address);
       });
       describe("constructor", () => {
         it("should have correct initial supply of tokens", async () => {
-          expect(await tdxToken.initialSupply()).equal(INITIAL_SUPPLY);
+          expect(await tdxToken.totalSupply()).equal(INITIAL_SUPPLY);
         });
         it("initilize the token with correct name and symbol", async () => {
-          assert.equal(await tdxToken.name().toString(), "TdxToken");
-          assert.equal(await tdxToken.symbol().toString(), "Tdx");
+          assert.equal(tdxToken.name().toString(), "TdxToken");
+          assert.equal(tdxToken.symbol().toString(), "Tdx");
         });
       });
       describe("transfers", () => {

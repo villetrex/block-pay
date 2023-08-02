@@ -40,7 +40,6 @@ const jwtOptions = {
 const processLogin = async (email: any, password: any, done: any) =>
   await UserModel.findOne({ where: { email } })
     .then(async user => {
-      console.log('processing login................................................................');
       if (!user) {
         return done(null, false, { message: 'Incorrect email or password.' });
       }
