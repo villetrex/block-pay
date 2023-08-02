@@ -16,6 +16,7 @@ import casual from 'casual';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
+import rateLimit, { MemoryStore } from 'express-rate-limit';
 import session from 'express-session';
 import { buildContext } from 'graphql-passport';
 import { useServer } from 'graphql-ws/lib/use/ws';
@@ -39,6 +40,15 @@ import { User } from './generated/graphql';
 //   // Otherwise let our resolvers know we don't have a current user
 //   return { currentUser: null };
 // };
+
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 100, // Limit each IP to 100 requests per `window` (here, per 15 minutes)
+  message: 'You have exceeded the 100 requests in 24 hrs limit!',
+  standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+  legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+  store: new MemoryStore(),
+});
 
 dotenv.config();
 passportConfig(passport);
@@ -103,6 +113,8 @@ passport.deserializeUser(async ({ id }: User, done) => {
   done(null, user);
 });
 
+// Apply the rate limiting middleware to all requests
+app.use(limiter);
 app.use(router);
 app.use(function (req, res, next) {
   passport.authenticate('validate-auth', { session: false }, (err: any, user: any) => {
@@ -174,8 +186,8 @@ server.start().then(() => {
   // Now that our HTTP server is fully set up, we can listen to it.
   httpServer.listen(PORT, async () => {
     await sequelize.sync();
-    console.log(`Server is now running on http:: http://localhost:${PORT}/graphql`);
-    console.log(`Server is now running on ws:: ws://localhost:${PORT}/graphql`);
+    console.log(`http server is now running on http:: http://localhost:${PORT}/graphql`);
+    console.log(`webSocket server is now running on ws:: ws://localhost:${PORT}/graphql`);
   });
 });
 

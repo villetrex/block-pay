@@ -3,42 +3,42 @@
     <loc>http://localhost:4200/500</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>Tue Apr 04 2023 11:51:39 GMT+0100 (West Africa Standard Time)</lastmod>
+    <lastmod>Thu Jun 15 2023 08:37:13 GMT+0100 (West Africa Standard Time)</lastmod>
   </url>
 <url>
     <loc>http://localhost:4200/admin</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>Tue Apr 04 2023 11:51:39 GMT+0100 (West Africa Standard Time)</lastmod>
+    <lastmod>Thu Jun 15 2023 08:37:13 GMT+0100 (West Africa Standard Time)</lastmod>
   </url>
 <url>
     <loc>http://localhost:4200/dashboard</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>Tue Apr 04 2023 11:51:39 GMT+0100 (West Africa Standard Time)</lastmod>
+    <lastmod>Thu Jun 15 2023 08:37:13 GMT+0100 (West Africa Standard Time)</lastmod>
   </url>
 <url>
     <loc>http://localhost:4200 copy</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>Tue Apr 04 2023 11:51:39 GMT+0100 (West Africa Standard Time)</lastmod>
+    <lastmod>Thu Jun 15 2023 08:37:13 GMT+0100 (West Africa Standard Time)</lastmod>
   </url>
 <url>
     <loc>http://localhost:4200</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>Tue Apr 04 2023 11:51:39 GMT+0100 (West Africa Standard Time)</lastmod>
+    <lastmod>Thu Jun 15 2023 08:37:13 GMT+0100 (West Africa Standard Time)</lastmod>
   </url>
 <url>
     <loc>http://localhost:4200/signin</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>Tue Apr 04 2023 11:51:39 GMT+0100 (West Africa Standard Time)</lastmod>
+    <lastmod>Thu Jun 15 2023 08:37:13 GMT+0100 (West Africa Standard Time)</lastmod>
   </url>
 <url>
     <loc>http://localhost:4200/testSaga</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <lastmod>Tue Apr 04 2023 11:51:39 GMT+0100 (West Africa Standard Time)</lastmod>
+    <lastmod>Thu Jun 15 2023 08:37:13 GMT+0100 (West Africa Standard Time)</lastmod>
   </url>
                   </urlset>

@@ -1,11 +1,8 @@
-import { Box, Button, ButtonLink, CircularProgress, ControlledTextField, TextField, Typography } from '@villetrex/ui';
-import { signIn } from 'next-auth/react';
-import React, { FC, memo, useEffect } from 'react';
-import { useState } from 'react';
+import { Box, Button, ButtonLink, CircularProgress, TextField, Typography } from '@villetrex/ui';
+import React, { FC, memo, useState } from 'react';
 import { Controller, UseControllerReturn, useForm } from 'react-hook-form';
 
 import { useSignIn } from 'src/hooks/useSignIn';
-import theme from 'src/providers/mui/theme';
 
 const inputRules = {
   email: {
@@ -50,7 +47,7 @@ const LoginForm: FC = () => {
     const { email, password } = getValues();
     setIsLoginLoading(true);
     signIn({ email, password });
-    setIsLoginLoading(false);
+    // setIsLoginLoading(false);
 
     // await AuthService.submitSignupForm({
     //   email,
